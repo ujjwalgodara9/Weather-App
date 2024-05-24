@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Increased margin for better spacing from top -->
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:hint="Enter Date (YYYY-MM-DD)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/locationInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Location"
+        app:layout_constraintTop_toBottomOf="@id/dateInput"
+        app:layout_constraintStart_toStartOf="@id/dateInput"
+        app:layout_constraintEnd_toEndOf="@id/dateInput"
+        android:layout_marginTop="16dp"/>  <!-- Space between Date Input and Location Input -->
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        app:layout_constraintTop_toBottomOf="@id/locationInput"
+        app:layout_constraintStart_toStartOf="@id/locationInput"
+        app:layout_constraintEnd_toEndOf="@id/locationInput"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/> <!-- Margin bottom is added for spacing below -->
+
+    <TextView
+        android:id="@+id/tvWeatherInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Weather Info"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/searchButton"
+        app:layout_constraintStart_toStartOf="@id/searchButton"
+        app:layout_constraintEnd_toEndOf="@id/searchButton"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/> <!-- Increased margin for clarity and focus -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
